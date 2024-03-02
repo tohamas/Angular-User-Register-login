@@ -1,0 +1,26 @@
+﻿
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <button class="btn btn-link nav-item nav-link dropdown_btn editBtn" routerLink="/">Home</button>
+    <button class="btn btn-link nav-item nav-link dropdown_btn editBtn" routerLink="/users">Users</button>
+    <button class="btn btn-link nav-item nav-link dropdown_btn editBtn" (click)="logout()">Logout</button>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="container">
+<div class="text-center mt-4 mb-4">
+    <div class="d-flex justify-content-center" *ngIf="user">
+            <button class="dropdown_btn selectedBtn" (click)="logout()">Logout </button>
+            <hr style="border-top: 1px solid;">
+ </div>
+        <div class="col-12">
+        <hr style="border-top: 1px solid;">
+        </div>
+    <a href="index.html"><img src="assets/images/ddi-logo.png" alt="" class="img-fluid" width="75"></a><br />
+    <small>Version: 1</small><br />
+    <small>2023 © All right reserved Double Down Interactive</small>
+</div>
+</div>
